@@ -14,6 +14,10 @@ public class DemoSalesforce {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://google.com");  //Get the URL in the browser
 		System.out.println(driver.getTitle());
+		
+		System.out.println("Demo Push");
+		
+		System.out.println("Demo Push2");
 	
 		driver.get("https://login.salesforce.com/");
 		driver.findElement(By.id("username")).sendKeys("sudeshdeulkar95@gmail.com"); 
