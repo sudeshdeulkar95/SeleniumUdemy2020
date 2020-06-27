@@ -4,14 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import dataProvider.ConfigFileReader;
+
 public class HandleJavaAlerts {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		String text = "Sudesh";
+		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");

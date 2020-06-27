@@ -9,12 +9,16 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import dataProvider.ConfigFileReader;
+
 public class CreateScreenShot {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");

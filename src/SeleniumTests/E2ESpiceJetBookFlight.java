@@ -6,13 +6,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import dataProvider.ConfigFileReader;
+
 public class E2ESpiceJetBookFlight {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		//Chrome Driver Location
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.spicejet.com/");

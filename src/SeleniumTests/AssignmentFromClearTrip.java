@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Select;
 
+import dataProvider.ConfigFileReader;
+
 public class AssignmentFromClearTrip {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -15,7 +17,9 @@ public class AssignmentFromClearTrip {
 
 		options.addArguments("--disable-notifications"); //the code is to disable notifications (got from reviewing code)
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.cleartrip.com/");

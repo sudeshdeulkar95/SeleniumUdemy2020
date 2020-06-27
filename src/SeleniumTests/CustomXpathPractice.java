@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import dataProvider.ConfigFileReader;
+
 public class CustomXpathPractice {
 
 	public static void main(String[] args) {
@@ -19,7 +21,9 @@ public class CustomXpathPractice {
 		
 		//Parent Child RelationShip Xpath
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe"); //Use double '\\' for escape sequence
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://google.com");
 		

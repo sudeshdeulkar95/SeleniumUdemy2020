@@ -8,12 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import dataProvider.ConfigFileReader;
+
 public class CalendarRealTime {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 				
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.path2usa.com/travel-companions");

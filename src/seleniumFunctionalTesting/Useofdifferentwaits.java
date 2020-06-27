@@ -20,12 +20,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import dataProvider.ConfigFileReader;
+
 public class Useofdifferentwaits {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //Implicit Wait
 		WebDriverWait wait = new WebDriverWait(driver,5);

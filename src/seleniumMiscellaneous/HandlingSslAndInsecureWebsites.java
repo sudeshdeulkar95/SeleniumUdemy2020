@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import dataProvider.ConfigFileReader;
+
 public class HandlingSslAndInsecureWebsites {
 
 	public static void main(String[] args) {
@@ -21,7 +23,9 @@ public class HandlingSslAndInsecureWebsites {
 		ChromeOptions ch = new ChromeOptions();
 		ch.merge(dcp);
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe");
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver(ch);
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");

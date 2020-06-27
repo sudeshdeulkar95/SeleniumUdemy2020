@@ -3,6 +3,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import dataProvider.ConfigFileReader;
+
 public class Demo {
 
 	public static void main(String[] args) {
@@ -12,7 +14,10 @@ public class Demo {
 		// Object obj = new Object(); //Format for writing an object
 		//We will implement the methods of WebDriver
 		
-		System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe"); //Use double '\\' for escape sequence
+		//System.setProperty("webdriver.chrome.driver","D:\\MyJavaLearning\\Drivers\\chromedriver.exe"); //Use double '\\' for escape sequence
+		ConfigFileReader configFileReader = new ConfigFileReader();		
+		
+		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://google.com");  //Get the URL in the browser
 		System.out.println(driver.getTitle());
