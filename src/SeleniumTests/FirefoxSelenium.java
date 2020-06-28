@@ -2,6 +2,8 @@ package SeleniumTests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import dataProvider.ConfigFileReader;
+
 public class FirefoxSelenium {
 
 	public static void main(String[] args) {
@@ -11,7 +13,9 @@ public class FirefoxSelenium {
 		// Object obj = new Object(); //Format for writing an object
 		//We will implement the methods of WebDriver
 		
-		System.setProperty("webdriver.gecko.driver","D:\\MyJavaLearning\\Drivers\\geckodriver.exe"); //Use double '\\' for escape sequence
+		ConfigFileReader configFileReader = new ConfigFileReader();	
+		
+		System.setProperty(configFileReader.getDriverPropertyFirefox(),configFileReader.getDriverPathFirefox()); //Use double '\\' for escape sequence
 		WebDriver driver = new FirefoxDriver();
 		driver.get("https://google.com");  //Get the URL in the browser
 		System.out.println(driver.getTitle());

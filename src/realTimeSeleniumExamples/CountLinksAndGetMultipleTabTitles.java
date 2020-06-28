@@ -26,7 +26,7 @@ public class CountLinksAndGetMultipleTabTitles {
 		
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		

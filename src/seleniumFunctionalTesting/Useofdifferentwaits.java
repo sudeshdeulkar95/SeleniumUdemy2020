@@ -29,7 +29,7 @@ public class Useofdifferentwaits {
 		
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS); //Implicit Wait
 		WebDriverWait wait = new WebDriverWait(driver,5);

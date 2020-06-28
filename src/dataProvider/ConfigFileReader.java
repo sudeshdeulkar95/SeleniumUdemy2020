@@ -28,15 +28,27 @@ public class ConfigFileReader {
 	 } 
 	 }
 	 
-	 public String getDriverPath(){
-	 String driverPath = properties.getProperty("driverPath");
-	 if(driverPath!= null) return driverPath;
+	 public String getDriverPathChrome(){
+	 String driverPathChrome = properties.getProperty("driverPathChrome");
+	 if(driverPathChrome!= null) return driverPathChrome;
 	 else throw new RuntimeException("driverPath not specified in the Configuration.properties file."); 
 	 }
 	 
-	 public String getDriverProperty(){
-	 String driverProperty = properties.getProperty("driverProperty");
-	 if(driverProperty!= null) return driverProperty;
+	 public String getDriverPropertyChrome(){
+	 String driverPropertyChrome = properties.getProperty("driverPropertyChrome");
+	 if(driverPropertyChrome!= null) return driverPropertyChrome;
+	 else throw new RuntimeException("driverProperty not specified in the Configuration.properties file."); 
+	 }
+	 
+	 public String getDriverPathFirefox(){
+	 String driverPathFirefox = properties.getProperty("driverPathFirefox");
+	 if(driverPathFirefox!= null) return driverPathFirefox;
+	 else throw new RuntimeException("driverPath not specified in the Configuration.properties file."); 
+	 }
+	 
+	 public String getDriverPropertyFirefox(){
+	 String driverPropertyFirefox = properties.getProperty("driverPropertyFirefox");
+	 if(driverPropertyFirefox!= null) return driverPropertyFirefox;
 	 else throw new RuntimeException("driverProperty not specified in the Configuration.properties file."); 
 	 }
 

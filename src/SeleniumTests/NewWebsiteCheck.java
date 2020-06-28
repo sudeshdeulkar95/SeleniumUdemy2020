@@ -11,7 +11,7 @@ public class NewWebsiteCheck {
 		// TODO Auto-generated method stub
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath()); //Use double '\\' for escape sequence
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome()); //Use double '\\' for escape sequence
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://rediff.com");
 		  

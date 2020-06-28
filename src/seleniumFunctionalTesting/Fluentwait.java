@@ -25,7 +25,7 @@ public class Fluentwait {
 		
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://the-internet.herokuapp.com/dynamic_loading/1");

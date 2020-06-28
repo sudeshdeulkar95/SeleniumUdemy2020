@@ -16,7 +16,7 @@ public class E2ESpiceJetBookFlight {
 		//Chrome Driver Location
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.spicejet.com/");

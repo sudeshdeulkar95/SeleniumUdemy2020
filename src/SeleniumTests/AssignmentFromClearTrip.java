@@ -19,7 +19,7 @@ public class AssignmentFromClearTrip {
 		
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.cleartrip.com/");

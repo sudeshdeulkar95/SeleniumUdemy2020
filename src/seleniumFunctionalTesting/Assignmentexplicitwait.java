@@ -15,7 +15,7 @@ public class Assignmentexplicitwait {
 		
 		ConfigFileReader configFileReader = new ConfigFileReader();		
 		
-		System.setProperty(configFileReader.getDriverProperty(),configFileReader.getDriverPath());
+		System.setProperty(configFileReader.getDriverPropertyChrome(),configFileReader.getDriverPathChrome());
 		WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver,5);
 		
