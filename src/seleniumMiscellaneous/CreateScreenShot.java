@@ -23,8 +23,8 @@ public class CreateScreenShot {
 		
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,new File("D:\\Udemy_CertificationSeleniumWebDriver\\myScreenShots\\screenShotDemo.png"));
+			File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(src,new File("D:\\Udemy_CertificationSeleniumWebDriver\\myScreenShots\\screenShotDemo.png"));
 		
 		driver.quit();
 
